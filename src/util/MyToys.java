@@ -16,16 +16,30 @@ public class MyToys {
     //n! bùng nổ value nhanh lắm, cho nên xài long lưu kết quả
     //15! to lắm rồi
     //dành cho CI/Continuous Integration, đệ quy recursion sau
-    public static long cF(int n){
-        if(n < 0 || n > 15)
-            throw new IllegalArgumentException("n must be between 0..15");
-        if(n == 0)
+    
+    //---------------------------------------------------------------
+//    public static long cF(int n){
+//        if(n < 0 || n > 15)
+//            throw new IllegalArgumentException("n must be between 0..15");
+//        if(n == 0)
+//            return 1;
+//        //đến đây n 1..15
+//        long product = 1; //biến nhân dồn, gom, tích luỹ accumulation
+//        for (int i = 1; i <= n; i++) {
+//            product *= i;
+//        }
+//        return product;
+//    }
+    //---------------------------------------------------------------
+    
+    public static long cF(int n) {
+        if(n==0 || n ==1)
             return 1;
-        //đến đây n 1..15
-        long product = 1; //biến nhân dồn, gom, tích luỹ accumulation
-        for (int i = 1; i <= n; i++) {
-            product *= i;
-        }
-        return product;
+        return n * cF(n - 1);
+        //đệ quy, pro, recursion - con búp bê Nga
+        //mở búp bê/ thấy con nhỏ hơn y chang/ mở con nhỏ, thấy nhỏ hơn nữa... 6 con hết
+        //đệ quy: gọi lại chính mình với quy mô nhỏ hơn
+        //4! = 4 x 3!; 3! = 3 x 2; 2! = 2 x 1!; 1! = 1;
+        
     }
 }

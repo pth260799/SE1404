@@ -19,8 +19,8 @@ public class SE1404 {
     public static void main(String[] args) {
         System.out.println("5! = " + MyToys.cF(5)); //hy vọng 120
         System.out.println("6! = " + MyToys.cF(6)); //expected 720
-        System.out.println("0! = " + MyToys.cF(0)); //expected 1
-        System.out.println("-5! = " + MyToys.cF(-5)); //toang
+//        System.out.println("0! = " + MyToys.cF(0)); //expected 1
+//        System.out.println("-5! = " + MyToys.cF(-5)); //toang
                 //JVM sẽ giết app, ném ra ngoại lệ của chính mình
                 //chửi user đưa tham số cà chớn
     }
