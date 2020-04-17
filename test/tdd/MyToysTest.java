@@ -28,14 +28,19 @@ public class MyToysTest {
     
     //tình huống hàm cF() chạy đúng, bản chất mỗi case phải là một hàm, tôi gộp
     @Test //biến hàm bất kì đi kèm JUnit thành public static void main()
-    public void testSuccessfulCases(){
-        assertEquals(1, cF(0)); //hàm so sánh và in ra màu xanh khớp, đỏ nếu không khớp
+    public void testSuccessfulLowerCases(){
+        assertEquals(10, cF(0)); //hàm so sánh và in ra màu xanh khớp, đỏ nếu không khớp
                                 //thay vì luận bằng mắt
         assertEquals(2, cF(2));
         assertEquals(6, cF(3));
         assertEquals(24, cF(4));
         assertEquals(120, cF(5));
         assertEquals(720, cF(6));
+    }
+    @Test 
+    public void testSuccessfulUpper10Cases(){
+        assertEquals(3628800, cF(10));
+        assertEquals(39916800, cF(11));
     }
     
     //ngoại lệ thì sao, ngoài lệ không phải là 1 value để so sánh
@@ -61,3 +66,10 @@ public class MyToysTest {
 
 //giống má khi đi làm dăn mình trong tờ giấy: 4h rửa nồi, đong gạo vo gạo... căn nước,
 //cắm điện, ấn nút Cook
+
+//cấu hình thiết kế Jenkins chơi được với Git lấy code
+//                                        Ant để biên dịch và đóng gói
+//                                        JDK để nó...
+//                                        Email Google gửi mail (Less secure app - Gmail đừng bảo mật quá)
+
+//tạo jobs/ lịch trình Build đóng gói App
