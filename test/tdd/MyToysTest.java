@@ -29,7 +29,7 @@ public class MyToysTest {
     //tình huống hàm cF() chạy đúng, bản chất mỗi case phải là một hàm, tôi gộp
     @Test //biến hàm bất kì đi kèm JUnit thành public static void main()
     public void testSuccessfulLowerCases(){
-        assertEquals(10, cF(0)); //hàm so sánh và in ra màu xanh khớp, đỏ nếu không khớp
+        assertEquals(1, cF(0)); //hàm so sánh và in ra màu xanh khớp, đỏ nếu không khớp
                                 //thay vì luận bằng mắt
         assertEquals(2, cF(2));
         assertEquals(6, cF(3));
